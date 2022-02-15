@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+// import React from 'react';
 import './App.css';
+import CardLayout from './layouts/CardLayout';
+import Navbar from './layouts/Navbar'
+import { Layout } from 'antd';
+const { Header, Content, Footer } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Scoferta Dorin | CR-192
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Layout>
+      <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+        <Navbar />
+      </Header>
+      <Content className="site-layout" style={{ padding: '100px 50px 50px 50px' }}>
+        <CardLayout />
+      </Content>
+      <Footer style={{ textAlign: 'center' }}>
+        Created by Scoferta Dorin
+      </Footer>
+    </Layout>
+  )
 }
 
 export default App;
