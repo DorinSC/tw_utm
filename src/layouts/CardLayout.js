@@ -17,15 +17,20 @@ const information = [
         title: "Card title 3",
         description: "information"
     },
+    {
+        id: 4,
+        title: "Card title 4",
+        description: "information"
+    },
 ]
 
 function CardLayout() {
     return (
-        <Row gutter={16}>
+        <Row gutter={16} >
             {
                 information.map((element, i) => {
                     return (
-                        <CustomCard key={element.id} title={element.title} description={element.description}/>
+                            <CustomCard key={element.id} title={element.title} description={element.description}/>
                     )
                 })
             }
