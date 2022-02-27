@@ -4,7 +4,7 @@ function CustomCard({title, description}) {
 
     return (
         <Col span={8}>
-            <div style={{ paddingTop: '8px', paddingBottom: '8px' }}>
+            <div style={{ marginTop: '8px', marginBottom: '8px' }}>
             <Card title={title} bordered={false}>
                 {description}
             </Card>
